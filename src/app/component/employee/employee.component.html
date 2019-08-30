@@ -1,0 +1,26 @@
+<table class="table table-bordered table-hover table-condensed">
+  <thead>
+    <tr>
+      <td>Id</td>
+      <td>Name</td>
+      <td>Age</td>
+      <td>Address</td>
+      <td>Action</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let employee of employees">
+      <td><a [routerLink]="['/employees',employee.id]">{{employee.id}}</a></td>
+      <td>{{employee.name}}</td>
+      <td>{{employee.age}}</td>
+      <td>{{employee.address}}</td>
+      <td>
+        <button (click)="deleteEmployee(employee)">Delete</button>
+        <button (click)="editEmployee(employee)">Eelete</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<router-outlet>
+</router-outlet>
