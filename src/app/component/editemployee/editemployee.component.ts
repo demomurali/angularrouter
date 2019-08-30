@@ -34,7 +34,7 @@ export class EditemployeeComponent implements OnInit {
       }
  
   
-
+   // instruction   
   ngOnInit() {
     this.route.paramMap.pipe(
       switchMap((paramMap:ParamMap)=>this.employeeService.getEmployeeById(paramMap.get('id')))
